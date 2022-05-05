@@ -1,0 +1,97 @@
+.black_container {
+    background-color: #000;
+}
+
+.black {
+    max-width: 1200px;
+    margin: 0px 120px 0px 120px;
+}
+
+
+.title {
+    color: #fff;
+    font-family: Orbitron;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    margin-right: 20px;
+    text-transform: uppercase;
+    padding: 40px 0px 16px 0px ;
+}
+
+.color_title {
+    font-family: Orbitron;
+    font-size: 60px;
+    font-weight: 800;
+    text-align: left;
+}
+
+.collection {
+    font-family: Orbitron;
+    font-size: 60px;
+    font-weight: 800;
+    text-align: left;
+    color: #fff;
+}
+
+.subtitle {
+    width: 33%;
+    color: #fff;
+    font-family: Orbitron;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    margin: 20px 0px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.product-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.products-card__name {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.products-card__description {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: left;
+    color: rgb(192, 192, 192);
+}
+
+.products-card__price {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: left;
+    color: #fff;
+    margin: 20px auto;
+}
+
+.viewall {
+    padding: 20px 0px 60px 0px;
+}
+.viewall input {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    margin-right: 10px;
+}
