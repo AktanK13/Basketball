@@ -4,6 +4,7 @@ import logo from '../../images/block1/Logo.png';
 import cart from '../../images/block1/Cart.png';
 import favorite from '../../images/block1/Favorite.png';
 import search from '../../images/block1/Search.png';
+import { Link } from 'react-router-dom';
 
 
 function Header() {
@@ -11,15 +12,15 @@ function Header() {
     <div className='header'>
         <div className='header-navbar'>
             <div className='logo'>
-                <img src={logo}/>
+                <Link to='/'><img src={logo}/></Link>
             </div>
             <div className='navbar-menu'>
                 <ul className='menu-ul'>
-                    <li className='menu-li'>MAN</li>
-                    <li className='menu-li'>WOMAN</li>
-                    <li className='menu-li'>JERSEY</li>
-                    <li className='menu-li'>TEAMS</li>
-                    <li className='menu-li'>APP</li>
+                    <Link className='menu-li' to='/Man'><li>MAN</li></Link>
+                    <Link className='menu-li' to='/Woman'><li>WOMAN</li></Link>
+                    <li className='menu-li'><a href='#jersey'>JERSEY</a></li>
+                    <li className='menu-li'><a href='#teams'>TEAMS</a></li>
+                    <Link className='menu-li' to='/SignUp'><li>SIGNUP</li></Link>
                 </ul>
             </div>
             <div className='navbar-icon'>

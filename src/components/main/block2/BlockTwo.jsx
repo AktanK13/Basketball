@@ -1,5 +1,6 @@
-import line from '../../images/block2/line.png'
-export default function BlockTree({ 
+import './BlockTwo.css'
+import line from '../../../images/block2/line.png'
+export default function BlockTwo({ 
   title,
   coloredTitle,
   collection,
@@ -8,7 +9,7 @@ export default function BlockTree({
 }) {
 
   return (
-    <section className="black_container">
+    <section className="black_container" id='jersey'>
       <div className="black">
         <div className="black_title">
           <h1 className='title'>Jersey {title}</h1>
