@@ -1,6 +1,6 @@
-import './BlockTwo.css'
-import line from '../../images/block2/line.png'
-export default function BlockTwo({ 
+import './BlockFour.css'
+import line from '../../../images/block2/line.png'
+export default function BlockFour({ 
   title,
   coloredTitle,
   collection,
@@ -18,7 +18,7 @@ export default function BlockTwo({
           <hr/>
           <h2 className='collection'>{collection}</h2>
           <hr/>
-          <h2 className='subtitle'>{subTitle}</h2>
+          <h2 className='subtitle-four'>{subTitle}</h2>
         </div>
         <div className="products">
           {products.map((item, i) => {

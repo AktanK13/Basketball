@@ -1,4 +1,4 @@
-import line from '../../images/block2/line.png'
+import line from '../../../images/block2/line.png'
 import './BlockOneHalf.css'
 
 export default function BlockOneHalf({ 
@@ -10,7 +10,7 @@ export default function BlockOneHalf({
 }) {
 
   return (
-    <section className="container_onehalf">
+    <section className="container_onehalf" id='teams'>
       <div className="onehalf">
         <div className="onehalf_title">
           <h1 className='url_title'>{title}</h1>
