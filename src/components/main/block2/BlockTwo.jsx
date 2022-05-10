@@ -1,13 +1,20 @@
 import './BlockTwo.css'
+import { useState } from 'react';
 import line from '../../../images/block2/line.png'
+import BlockTwoProducts from '../../../objects/BlockTwoProducts.json'
+import Modal from '../Modal/Modal.jsx'
+
+
 export default function BlockTwo({ 
   title,
   coloredTitle,
   collection,
   subTitle,
-  products,
+  divak
 }) {
 
+  const [searchTerm, setSearchTerm] = useState("");
+  const [modalActive, setModalActive] = useState(false)
   return (
     <section className="black_container" id='jersey'>
       <div className="black">
@@ -20,19 +27,39 @@ export default function BlockTwo({
           <hr/>
           <h2 className='subtitle'>{subTitle}</h2>
         </div>
-        <div className="products">
-          {products.map((item, i) => {
-            return (
-              <div key={i} className="products-card">
-                <img width={307} height={373} src={item.image} alt="" />
-                <div className="products-card__name">{item.name}</div>
-                <div className="products-card__description">{item.description}</div>
-                <div className="products-card__price">{item.price}</div>
-              </div>
-            )
-          })}
+          
+        <>
+
+        <div>
+          <input className="searchInput" type="text" placeholder="Search here..." onChange={(event) => {
+            setSearchTerm(event.target.value);
+          }} />
         </div>
 
+      <div className="products">
+          {
+            BlockTwoProducts 
+              .filter((val) => {
+                if(searchTerm == ""){
+                  return val;
+                }else if(val.name.toLowerCase().includes(searchTerm.toLowerCase())){
+                  return val;
+                }
+              })
+              .map((val) => {
+                return(
+                  <div className="products-card">
+                      <img width={307} height={373} src={val.image} onClick={() => setModalActive(true)}/>
+                      <div className="products-card__name">{val.name}</div>
+                      <h3 className="products-card__description">{val.description}</h3>
+                      <p className="products-card__price">${val.price}</p>
+                  </div> 
+                )
+              })
+          }
+      </div>
+    </>
+    <Modal active={modalActive} setActive={setModalActive} />
         <div className='viewall'>
           <input type="button" value="View all" /><img src={line}/>
         </div>

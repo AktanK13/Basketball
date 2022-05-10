@@ -5,9 +5,13 @@ import cart from '../../images/block1/Cart.png';
 import favorite from '../../images/block1/Favorite.png';
 import search from '../../images/block1/Search.png';
 import { Link } from 'react-router-dom';
+import Input from '../Input/Input.jsx'
 
 
 function Header() {
+
+
+
   return (
     <div className='header'>
         <div className='header-navbar'>
@@ -23,6 +27,11 @@ function Header() {
                     <Link className='menu-li' to='/SignUp'><li>SIGNUP</li></Link>
                 </ul>
             </div>
+
+            <div>
+                
+            </div>
+
             <div className='navbar-icon'>
                 <ul className='icon-ul'>
                     <li className='icon-li'>
